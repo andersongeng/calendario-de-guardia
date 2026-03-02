@@ -8,6 +8,7 @@ from datetime import datetime
 from PIL import Image
 
 icon = Image.open("logo.png")
+# a
 
 # --- FUNCIÓN GENERADORA DEL PDF ---
 def generar_pdf(mes, anio, personal, feriados_lista):
