@@ -5,6 +5,9 @@ from reportlab.platypus import SimpleDocTemplate, Table, TableStyle, Paragraph, 
 from reportlab.lib.styles import getSampleStyleSheet, ParagraphStyle
 import calendar
 from datetime import datetime
+from PIL import Image
+
+icon = Image.open("logo.png")
 
 # --- FUNCIÓN GENERADORA DEL PDF ---
 def generar_pdf(mes, anio, personal, feriados_lista):
@@ -106,7 +109,7 @@ def generar_pdf(mes, anio, personal, feriados_lista):
     return filename
 
 # --- INTERFAZ PRINCIPAL DE LA APP (Móvil-Friendly) ---
-st.set_page_config(page_title="Rol Puerto Escondido", page_icon="🛡️")
+st.set_page_config(page_title="Rol Puerto Escondido", page_icon=icon)
 
 st.title("🛡️ Sistema de Seguridad")
 st.markdown("### Configuración del Rol de Guardia")
